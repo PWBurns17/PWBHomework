@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 #1\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0\fs26 \cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 MVC (Model View Controller) is the oldest architecture pattern (1979) and divides software between the Model that handles the data and business logic, the View that handles how information is displayed to the user, and a Controller that mediates between the Model and the View.
+\f0\b\fs40 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b0\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 MVVM (Model View View Model) is an extension of MVC that replaces the Controller with a View Model. The View Model uses a binder to update the View with data from the Model without the View and View Model having a direct reference to each other.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 MVP (Model View Presenter) replaces the Controller with a Presenter that implements protocols/interfaces to handle communication with the Model and View. \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 The MVC works well for simple programs that prevents the Controller from becoming too complicated. MVC is sometimes referred to as \'93Massive View Controller\'94 because of the tendency for the View Controller to take on too much functionality and make it too large and complicated. MVVM is better suited to applications focused on displaying a lot of data on the View as the binder makes updating it easy, while the MVP is better when communication between components needs to be well organized with the help of protocols.\
+\
+#2\
+Singleton is a creational design pattern that involves creating a single instance of an object that can be accessed globally. It is easy to overuse by lazy programmers because of how easy it is to access. It is well suited when working with a centralized datasource like a database. Having one point of access to the database can prevent race conditions where multiple components all attempt to access that resource at the same time and can result in some of them receiving out-of-date information.\
+\
+The Factory creational design pattern is intended to hide the implementation of creating new objects from client components. This involves creating a factory object that will instantiate and pass other objects to the client components rather than having the clients instantiate them on their own. It helps to keep class instantiation details centralized in one place to make them easier to maintain.\
+\
+The Facade structural design pattern creates a simple interface for client components to access that encapsulates a complex system of objects behind it. It decouples the inner workings from how clients make use of them. The classes behind the facade can be changed without impacting how the facade object or client objects function.\
+\
+The Decorator structural design pattern allows you to add functionality to an object without changing its code. Two very common methods of implementing this pattern are extensions and delegates. Extensions allow you to add new functions to a pre-existing class including those found in the UIKit framework. Delegates allow one object to perform a task on behalf of another object, for example the UITableViewCell object has two delegates, the Datasource that it how many rows are is a section and the Delegate that tells it what to do when a cell is clicked.\
+\
+The Adapter structural design pattern allows for reusing old components that don\'92t interface properly with a new system. An adapter class can be written where the client component accesses the adapter class and then the adapter interfaces with the legacy component. Adapters are sometimes called wrappers because they wrap around they legacy component providing a new way of accessing it.\
+\
+The Observer behavioral design pattern is about communicating state-changes with other objects. Two common methods are notifications and Key-Value Observing. With Notifications an object will subscribe to receive notifications from another object (or itself) when a state-change occurs. The object that sends the message (the publisher) and the object that receives the message (the subscriber) don\'92t need to know anything about each other. Key-Value Observing is similar, it\'92s when a message is sent whenever a particular property changes value.}
